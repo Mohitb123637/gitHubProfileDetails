@@ -1,10 +1,16 @@
 // GithubProfileFinder.scss
 
+body {
+  margin: 0;
+  height: 100vh; /* Ensure the body takes the full height of the viewport */
+  background: linear-gradient(135deg, #ff6f61, #6fa3ef, #88d2f9);
+  background-size: 300% 300%; /* Allows for smooth animation if desired */
+  animation: gradientAnimation 15s ease infinite;
+}
+
 .github-profile-finder {
   height: auto;
   width: 100vw;
-  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
-    cover no-repeat fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +36,7 @@
         border-radius: 5px;
         margin-left: 3rem;
         border: none;
+        border: 1px solid black;
       }
 
       button {
@@ -74,20 +81,28 @@
 }
 @media (max-width: 396px) {
   .github-profile-finder {
- 
-
     .container {
       width: 90vw;
       .input-wrapper {
         input {
           width: 10rem;
-         
         }
 
         button {
-      
         }
       }
     }
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
