@@ -36,7 +36,7 @@ const GithubProfileFinder = () => {
 
   useEffect(() => {
     fetchGithubUserData(userName);
-  }, [fetchGithubUserData, userName]);
+  }, [fetchGithubUserData]);
 
   if (loading) {
     return <h1>Data is Loading. Please wait!!</h1>;
